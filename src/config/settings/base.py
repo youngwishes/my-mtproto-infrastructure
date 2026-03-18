@@ -31,6 +31,7 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "beatvault.ru",
     "www.beatvault.ru",
+    "space.beatvault.ru",
     "django",
 ]
 
