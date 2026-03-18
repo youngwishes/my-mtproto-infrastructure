@@ -27,14 +27,6 @@ services:
       - backend
     depends_on:
       - django
-      - flower
-
-  redis:
-    container_name: redis
-    image: redis:7-alpine
-    restart: unless-stopped
-    networks:
-      - backend
 
   haproxy:
     image: haproxy:lts-alpine
@@ -46,7 +38,7 @@ services:
       - "8404"
     volumes:
       - ./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
-      - ./haproxy/hosts:/etc/hosts:ro  # Добавить эту строку
+      - ./haproxy/hosts:/etc/hosts:ro
     networks:
       - backend
     restart: unless-stopped
