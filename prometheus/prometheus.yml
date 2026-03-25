@@ -8,28 +8,28 @@ global:
 scrape_configs:
   - job_name: 'telemt-node1'
     static_configs:
-      - targets: ['192.168.0.4:9090']
+      - targets: ['127.0.0.1:10101']
     metrics_path: /metrics
     scrape_interval: 30s
     scrape_timeout: 10s
 
   - job_name: 'telemt-node2'
     static_configs:
-      - targets: ['192.168.0.6:9090']
+      - targets: ['127.0.0.1:10102']
     metrics_path: /metrics
     scrape_interval: 30s
     scrape_timeout: 10s
 
   - job_name: 'telemt-node3'
     static_configs:
-      - targets: ['192.168.0.7:9090']
+      - targets: ['127.0.0.1:10103']
     metrics_path: /metrics
     scrape_interval: 30s
     scrape_timeout: 10s
 
   - job_name: 'telemt-node4'
     static_configs:
-      - targets: ['192.168.0.8:9090']
+      - targets: ['127.0.0.1:10104']
     metrics_path: /metrics
     scrape_interval: 30s
     scrape_timeout: 10s
