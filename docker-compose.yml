@@ -1,6 +1,7 @@
 services:
   django:
     build: .
+    image: my-django:latest
     container_name: django
     entrypoint: ["./entrypoint.sh"]
     volumes:
@@ -15,6 +16,7 @@ services:
 
   nginx:
     build: ./nginx
+    image: my-nginx:latest
     container_name: nginx
     volumes:
       - static_volume:/static:ro
