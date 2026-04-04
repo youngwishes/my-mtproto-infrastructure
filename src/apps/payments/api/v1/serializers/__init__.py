@@ -1,2 +1,0 @@
-from .get_product_serializer import GetProductSerializer
-from .create_payment_serializer import CreatePaymentSerializer

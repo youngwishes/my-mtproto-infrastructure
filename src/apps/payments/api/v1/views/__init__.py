@@ -1,2 +1,0 @@
-from .get_product_view import ProductAPIView
-from .create_payment_view import CreatePaymentView

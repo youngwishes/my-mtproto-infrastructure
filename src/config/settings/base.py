@@ -44,12 +44,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "apps.users",
-    "apps.vds",
-    "apps.tribute",
     "apps.music",
-    "apps.payments",
-    "rest_framework",
 ]
 
 MIDDLEWARE = [
@@ -131,8 +126,6 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATIC_ROOT = "static/"
-
-AUTH_USER_MODEL = "users.SystemUser"
 
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 SESSION_COOKIE_SECURE = True
