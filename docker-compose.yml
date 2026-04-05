@@ -2,6 +2,11 @@ services:
   django:
     build: .
     image: my-django:latest
+    logging:
+      driver: "local"
+      options:
+        max-size: "10m"
+        max-file: "3"
     container_name: django
     entrypoint: ["./entrypoint.sh"]
     volumes:
@@ -17,6 +22,11 @@ services:
   nginx:
     build: ./nginx
     image: my-nginx:latest
+    logging:
+      driver: "local"
+      options:
+        max-size: "10m"
+        max-file: "3"
     container_name: nginx
     volumes:
       - static_volume:/static:ro
@@ -33,6 +43,11 @@ services:
   haproxy:
     image: haproxy:lts-alpine
     container_name: haproxy
+    logging:
+      driver: "local"
+      options:
+        max-size: "10m"
+        max-file: "3"
     ports:
       - "0.0.0.0:443:443"
       - "0.0.0.0:80:80"
